@@ -2,8 +2,8 @@
 resource "aws_instance" "react_instance" {
   ami = lookup(var.awsprops, "ami")
   instance_type = lookup(var.awsprops, "itype")
-  subnet_id = lookup(var.awsprops, "subnet") #FFXsubnet2
-  associate_public_ip_address = lookup(var.awsprops, "publicip")
+  subnet_id = aws_subnet.subnet_public.id
+  associate_public_ip_address = true
   key_name = local_file.tf-key.filename
 
 
@@ -14,12 +14,6 @@ resource "aws_instance" "react_instance" {
     delete_on_termination = true
     volume_size = 50
     volume_type = "gp2"
-  }
-  tags = {
-    Name ="ReactApp"
-    Environment = "DEV"
-    OS = "Amazon Linux 2"
-    Managed = "Terraform"
   }
   depends_on = [ aws_security_group.react_SG ]
 

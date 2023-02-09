@@ -29,5 +29,8 @@ terraform destroy --auto-approve
 
 ## * Notes
 ```
-The project will deploy Security Group, and Amazon Linux instance on the N.Virginia region.
+The project will deploy on your chosen region:
+* VPC: CIDR 10.1.0.0/16
+* SubnetMask: CIDR 10.1.0.0/24
+* Security Group: Allowing ports 3000 and 22 to the reactApp instance
 ```
