@@ -4,9 +4,9 @@
 
 2. Install AWS CLI and [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-3. Set the variable values to your AWS infrastructure in the **variables.tf** file
+3. You may change to your region ID in the **variables.tf** file
 
-4. (Optional) - If you have more than one IAM profile on your local machine - You can choose what profile to add as a value for the "profile" variable in the **variables.tf** file
+4. (Optional) - You may set a non-default IAM profile's name as the value of the "profile" variable in the **variables.tf** file if you have more than one IAM profile
 
 5. To execute the project - follow the commands from the **Red-Project-reactApp** directory:
 ```
