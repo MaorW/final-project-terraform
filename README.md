@@ -4,9 +4,11 @@
 
 2. Install AWS CLI and [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-3. (Optional) - If you have more than one IAM profile on your local machine - You can choose what profile to add as a value for the "profile" variable in the **variables.tf** file
+3. Set the variable values to your AWS infrastructure in the **variables.tf** file
 
-4. To execute - Change to these directory and follow those commands:
+4. (Optional) - If you have more than one IAM profile on your local machine - You can choose what profile to add as a value for the "profile" variable in the **variables.tf** file
+
+5. To execute the project - follow the commands from the **Red-Project-reactApp** directory:
 ```
 terraform init
 
@@ -15,17 +17,17 @@ terraform plan -out tfplan
 terraform apply "tfplan"
 ```
 
-5. Connect to the instance with the reactApp_URL value
+6. Connect to the instance with the reactApp_URL link
 
 ![Kiku](pic/Link-Instructions.png)
 
-6. After finishing with the project you may destroy the infrustructure 
+7. After finishing with the project you may destroy the infrustructure 
 ```
 terraform destroy --auto-approve
 ```
 
 
-## Notes
+## * Notes
 ```
 The project will deploy Security Group, and Amazon Linux instance on the N.Virginia region.
 ```
