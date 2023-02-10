@@ -4,11 +4,11 @@
 
 2. Install AWS CLI and [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-3. You may change to your region ID in the **variables.tf** file
+3. (Optional) - You may change to your region ID in the **variables.tf** file
 
 4. (Optional) - You may set a non-default IAM profile's name as the value of the "profile" variable in the **variables.tf** file if you have more than one IAM profile
 
-5. To execute the project - follow the commands from the **Red-Project-reactApp** directory:
+5. Execute the project - follow the commands from the **Red-Project-reactApp** directory:
 ```
 terraform init
 
