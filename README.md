@@ -1,4 +1,22 @@
-# Deployment steps for the [Red Project](https://drive.google.com/file/d/10p8pGgD14EbtHpU-fOyjrtS5whgc42oo/view)
+# DevSecOps final Project course
+
+## Instructions:
+```
+Repo: https://github.com/hothaifa96/node-october
+branch: react-b
+folder: counter-app
+
+- Run with terraform/ansible an instance of EC2.
+
+- Run a React application. Use the ‘npm start‘ command to run it.
+
+- Install the libraries with the 'rpm I' command to.
+
+- You need to install  Node, and then clone the repo.
+
+The app should run on port 3000.
+
+```
 
 1. [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
