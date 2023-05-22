@@ -10,9 +10,9 @@ folder: counter-app
 
 - Run a React application. Use the ‘npm start‘ command to run it.
 
-- Install the libraries with the 'rpm I' command to.
+- Install the libraries with the 'rpm I' command.
 
-- You need to install  Node, and then clone the repo.
+- You need to install Node, and then clone the repo.
 
 The app should run on port 3000.
 
