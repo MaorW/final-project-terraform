@@ -1,6 +1,6 @@
 
 resource "aws_instance" "react_instance" {
-  ami = lookup(var.awsprops, "ami")
+  ami = data.aws_ami.Amazon_Linux_2023_AMI.id
   instance_type = lookup(var.awsprops, "itype")
   subnet_id = aws_subnet.subnet_public.id
   associate_public_ip_address = true

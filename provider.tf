@@ -4,7 +4,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Name ="Red-Project-reactApp"
+      Name ="final-project-terraform"
       Environment = "DEV"
       Managed = "Terraform"
    }
