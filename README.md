@@ -26,7 +26,7 @@ The app should run on port 3000.
 
 4. (Optional) - You may set a non-default IAM profile's name as the value of the "profile" variable in the **variables.tf** file if you have more than one IAM profile
 
-5. Execute the project - follow the commands from the **Red-Project-reactApp** directory:
+5. Execute the project - follow the commands from the **final-project-terraform** directory:
 ```
 terraform init
 
