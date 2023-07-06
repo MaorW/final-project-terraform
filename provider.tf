@@ -1,12 +1,11 @@
 provider "aws" {
-  profile = lookup(var.awsprops, "profile")
-  region = lookup(var.awsprops, "region")
+  region = "eu-west-1" # You may change to your region ID
 
   default_tags {
     tags = {
-      Name ="final-project-terraform"
-      Environment = "DEV"
-      Managed = "Terraform"
-   }
+      Name        = "final-project-terraform"
+      Terraform   = "true"
+      Environment = "dev"
+    }
   }
 }
