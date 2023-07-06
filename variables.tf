@@ -52,7 +52,7 @@ data "aws_ami" "Amazon_Linux_2023_AMI" {
   }
 }
 
-##### EC2 Variables ############
+##### key_name Variables ############
 variable "key_name" {
   description = "Private Key Name"
   type        = string
