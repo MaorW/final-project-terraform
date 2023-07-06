@@ -35,7 +35,7 @@ terraform plan -out tfplan
 terraform apply "tfplan"
 ```
 
-6. Connect to the instance with the reactApp_URL link
+6. Connect to the instance with the reactApp_URL link/s
 
 ![Kiku](pic/Link-Instructions.png)
 
