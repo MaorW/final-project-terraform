@@ -7,12 +7,12 @@ terraform {
   }
 
   backend "s3" {
-    bucket = var.bucket
-    key    = var.bucket_folder
-    region = var.region
+    bucket = "terraform-project-state-tmp"
+    key    = "final-project-terraform/terraform.tfstate"
+    region = "eu-west-1"
 
     # Get status from Dynamodb state locking
-    dynamodb_table = var.dynamodb_table
+    dynamodb_table = "final-project-terraform-state-locking"
   }
 
 }
