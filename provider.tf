@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1" # You may change to your region ID
+  region = var.region
 
   default_tags {
     tags = {

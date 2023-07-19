@@ -5,5 +5,5 @@ output "reactApp_URLS" {
 
 output "Instructions" {
   description = "Instructions for serving the new instances"
-  value       =  "Take every IP and surf with 'http://<IP_ADDRESS>:3000'"
+  value       = "Take every IP and surf with 'http://<IP_ADDRESS>:3000'"
 }

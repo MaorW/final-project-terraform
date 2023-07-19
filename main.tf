@@ -5,6 +5,16 @@ terraform {
       version = "5.6.2"
     }
   }
+
+  backend "s3" {
+    bucket = var.bucket
+    key    = var.bucket_folder
+    region = var.region
+
+    # Get status from Dynamodb state locking
+    dynamodb_table = var.dynamodb_table
+  }
+
 }
 
 module "vpc" {

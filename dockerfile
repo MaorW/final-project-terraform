@@ -34,4 +34,6 @@ COPY . .
 
 RUN terraform init
 
-CMD [ "terraform", "apply", "-auto-approve" ]
+# ENTRYPOINT [ "terraform", "init"]
+
+CMD [ "terraform", "apply","-auto-approve" ]

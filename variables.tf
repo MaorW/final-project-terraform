@@ -1,4 +1,30 @@
-##### VPC Variables ############333
+##### Backend to S3 variables ############
+variable "region" {
+  description = "The region that you'll like to set your environment with"
+  type        = string
+  default     = "eu-west-1"
+}
+
+variable "bucket" {
+  description = "The S3 bucket that you'll like to set for backing the tfstate file"
+  type        = string
+  default     = "terraform-project-state-tmp"
+}
+
+variable "bucket_folder" {
+  description = "The folder on the S3 bucket that contains the tfstate file"
+  type        = string
+  default     = "final-project-terraform/terraform.tfstate"
+}
+
+
+variable "dynamodb_table" {
+  description = "The state locking table on DynamoDB"
+  type        = string
+  default     = "final-project-terraform-state-locking"
+}
+
+##### VPC Variables ############
 
 variable "vpc_name" {
   description = "Name of VPC"
