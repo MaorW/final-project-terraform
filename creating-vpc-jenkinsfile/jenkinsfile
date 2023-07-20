@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    environment { 
+        AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-access-key')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-key-id')
+    }
+
+    stages {
+        stage('Cloning') {
+            steps {
+                // Clean workspace before cloning
+                deleteDir()
+
+                // Clone the git repository
+                checkout scmGit(branches: [[name: '*/Working-with-jenkins']], userRemoteConfigs: [[url: 'https://github.com/MaorW/final-project-terraform.git']])
+            }
+        }
+
+        stage('Building') {
+            steps {
+                // Build Docker image using the Dockerfile in the repository
+                sh 'docker build -t terrafrom_test:v1.0 .'
+            }
+        }
+
+        stage('Executing') {
+            steps {
+                // Run a Docker container using the image built earlier
+                sh 'docker run --rm -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -e AWS_DEFAULT_REGION="eu-west-1" terrafrom_test:v1.0 && terraform apply --auto-approve'
+            }
+        }
+    }
+}
