@@ -32,8 +32,4 @@ WORKDIR /terraform
 
 COPY . .
 
-RUN terraform init
-
-# ENTRYPOINT [ "terraform", "init"]
-
-CMD [ "terraform", "apply","-auto-approve" ]
+ENTRYPOINT [ "terraform", "init" ]
