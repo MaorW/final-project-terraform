@@ -30,6 +30,8 @@ RUN \
 
 WORKDIR /terraform
 
+COPY ./creating-vpc-jenkinsfile/script.sh script.sh
+
 COPY . .
 
-ENTRYPOINT [ "terraform", "init" ]
+ENTRYPOINT [ "sh", "script.sh" ]
