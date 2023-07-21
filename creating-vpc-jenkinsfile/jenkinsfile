@@ -19,7 +19,7 @@ pipeline {
         stage('Building') {
             steps {
                 // Build Docker image using the Dockerfile in the repository
-                sh 'ocker build -t terrafrom_test:v1.0 -f ./creating-vpc-jenkinsfile/dockerfile .'
+                sh 'docker build -t terrafrom_test:v1.0 -f ./creating-vpc-jenkinsfile/dockerfile .'
             }
         }
 
